@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="course.css">
+    <title>Course</title>
+</head>
+<body>
+
+    <!-- Header + Nav Container -->
+<header class="site-header">
+  <div class="container header-nav">
+    <!-- Logo -->
+    <div class="logo">SkillHub</div>
+
+    <!-- Nav -->
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+       <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Search -->
+    <div class="search-box">
+      <input type="text" placeholder="Search courses..." />
+      <button>Search
+        <span class="arrow">➔</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<section class="course-filters">
+  <div class="container">
+    <!-- Search Bar -->
+    <input type="text" placeholder="Search for courses..." class="search-bar">
+
+    <!-- Category Filter -->
+    <select class="filter-select">
+      <option value="">All Categories</option>
+      <option value="design">Design</option>
+      <option value="development">Development</option>
+      <option value="marketing">Marketing</option>
+      <option value="business">Business</option>
+    </select>
+
+    <!-- Sort Filter -->
+    <select class="filter-select">
+      <option value="popular">Most Popular</option>
+      <option value="newest">Newest</option>
+      <option value="price_low_high">Price: Low to High</option>
+      <option value="price_high_low">Price: High to Low</option>
+    </select>
+  </div>
+</section>
+
+    <section class="course-listings">
+  <div class="container">
+    <h2>Explore Our Courses</h2>
+    <div class="course-grid">
+      <!-- Course Card 1 -->
+      <div class="course-card">
+        <img src="images/course1.jpg" alt="Course 1" class="course-thumbnail">
+        <h3 class="course-title">Introduction to Web Development</h3>
+        <div class="course-rating">⭐⭐⭐⭐☆ (120)</div>
+        <div class="course-price">$29.99</div>
+        <a href="#" class="course-btn">View Course</a>
+      </div>
+
+      <!-- Course Card 2 -->
+      <div class="course-card">
+        <img src="images/course2.jpg" alt="Course 2" class="course-thumbnail">
+        <h3 class="course-title">Mastering Graphic Design</h3>
+        <div class="course-rating">⭐⭐⭐⭐⭐ (85)</div>
+        <div class="course-price">Free</div>
+        <a href="#" class="course-btn">View Course</a>
+      </div>
+
+      <!-- Course Card 3 -->
+      <div class="course-card">
+        <img src="images/course3.jpg" alt="Course 3" class="course-thumbnail">
+        <h3 class="course-title">Data Science with Python</h3>
+        <div class="course-rating">⭐⭐⭐⭐☆ (200)</div>
+        <div class="course-price">$49.99</div>
+        <a href="#" class="course-btn">View Course</a>
+      </div>
+
+      <!-- Course Card 4 -->
+      <div class="course-card">
+        <img src="images/course4.jpg" alt="Course 4" class="course-thumbnail">
+        <h3 class="course-title">Digital Marketing Strategies</h3>
+        <div class="course-rating">⭐⭐⭐⭐⭐ (95)</div>
+        <div class="course-price">$19.99</div>
+        <a href="#" class="course-btn">View Course</a>
+      </div>
+    </div>
+  </div>
+  
+<!-- Course Card 5 -->
+  <div class="course-card">
+        <img src="images/course5.jpg" alt="Course 5" class="course-thumbnail">
+        <h3 class="course-title">Business Analytics Fundamentals</h3>
+        <div class="course-rating">⭐⭐⭐⭐☆ (110)</div>
+        <div class="course-price">$39.99</div>
+        <a href="#" class="course-btn">View Course</a>
+      </div>
+
+<!-- Course Card 6 -->
+      <div class="course-card">
+        <img src="images/course6.jpg" alt="Course 6" class="course-thumbnail">
+        <h3 class="course-title">UI/UX Design Principles</h3>
+        <div class="course-rating">⭐⭐⭐⭐⭐ (150)</div>
+        <div class="course-price">$24.99</div>
+        <a href="#" class="course-btn">View Course</a>
+
+        <!-- Course Card 7 -->
+<div class="course-card">
+  <img src="images/course5.jpg" alt="Course 7" class="course-thumbnail">
+  <h3 class="course-title">Intro to UI/UX Design</h3>
+  <div class="course-rating">⭐⭐⭐⭐☆ (140)</div>
+  <div class="course-price">$24.99</div>
+  <a href="#" class="course-btn">View Course</a>
+</div>
+
+<!-- Course Card 8 -->
+<div class="course-card">
+  <img src="images/course6.jpg" alt="Course 8" class="course-thumbnail">
+  <h3 class="course-title">Excel for Data Analysis</h3>
+  <div class="course-rating">⭐⭐⭐⭐⭐ (310)</div>
+  <div class="course-price">$14.99</div>
+  <a href="#" class="course-btn">View Course</a>
+</div>
+</section>
+
+<!-- Courses Grid -->
+<section class="courses-list">
+  <div class="course-grid" id="courseGrid">
+    <!-- Course cards here -->
+  </div>
+
+  <!-- Load More Button -->
+  <div class="load-more-container">
+    <button id="loadMoreBtn">Load More</button>
+  </div>
+</section>
+
+
+<!-- CTA Section -->
+<section class="cta-banner">
+  <div class="cta-container">
+    <h2>Ready to take the next step?</h2>
+    <p>Join now and unlock unlimited access to all courses.</p>
+    <a href="signup.html" class="cta-button">Sign Up Now</a>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Logo / Brand -->
+    <div class="footer-brand">
+      <h2>SkillHub</h2>
+      <p>Learn. Grow. Succeed.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Email: support@skillhub.com</p>
+      <p>Phone: +234 812 707 8944</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 SkillHub. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

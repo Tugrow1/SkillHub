@@ -25,7 +25,7 @@
 /* Hero Section with Background Image */
 .about-hero {
   position: relative;
-  background: url("Images/learning0.jpg") center/cover no-repeat;
+  background: url("Images/try0.jpg") center/cover no-repeat;
   color: var(--white);
   min-height: 60vh;
   display: flex;

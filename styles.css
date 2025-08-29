@@ -113,20 +113,48 @@
 .nav li:nth-child(5) a::after { transition-delay: 0.2s; } */
 
 
-/* Hero Section */
+/* Colors are defined in `global.css :root` — using those variables here */
 
-.page-container {
+/* Layout utilities */
+.container, .page-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-  background: url("Images/try0.jpg") center/cover no-repeat;
-  
-  
 }
 
+
 .hero {
-  /* background: var(--white); */
+  position: relative;
   padding: 4rem 2rem;
+  z-index: 1;
+}
+
+.hero-bg {
+  background-image: url("Images/learning0.jpg");
+  background-size: cover;
+  background-position: center;
+  /* subtle overlay using nav-blue (rgb 21,101,192) blended for palette consistency */
+  background-color: rgba(21,101,192,0.28);
+  background-blend-mode: overlay;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.45));
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
@@ -156,15 +184,16 @@
   flex: 1;
 }
 
-.hero-text h2 {
+.hero-text h1, .hero-text h2 {
   font-size: 2.5rem;
-  color: var(--nav-blue);
+  color: var(--white);
   margin-bottom: 1rem;
+  text-shadow: 0 2px 8px rgba(2,6,23,0.4);
 }
 
 .hero-text p {
   font-size: 1.125rem;
-  color: var(--text-dark);
+  color: rgba(255,255,255,0.95);
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -176,13 +205,15 @@
 }
 
 .btn-primary {
+  display: inline-block;
   background: var(--brand-blue);
   color: var(--white);
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  /* transition: background 0.3s ease; */
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(30,136,229,0.12);
+  transition: transform 0.16s ease, box-shadow 0.2s ease, background 0.16s ease;
 }
 
 /* .btn-primary:hover {
@@ -190,31 +221,82 @@
 } */
 
 .btn-secondary {
+  display: inline-block;
   background: transparent;
   color: var(--brand-blue);
   border: 2px solid var(--brand-blue);
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-secondary {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--primary-color);
-  border-radius: 6px;
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s ease, color 0.2s ease;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 
 .btn-secondary:hover {
-  background: var(--primary-color);
-  color: var(--brand-blue);
+  background: var(--brand-blue);
+  color: var(--white);
 }
+
+/* Make the hero Sign Up button visually prominent */
+.hero .btn-secondary {
+  background: rgba(255,255,255,0.95);
+  color: var(--nav-blue);
+  border-color: rgba(255,255,255,0.9);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.18);
+}
+
+.hero .btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(2,6,23,0.22);
+  background: #ffffff;
+  color: var(--nav-blue);
+}
+
+.btn-primary:hover{
+  transform: translateY(-4px);
+  background: var(--nav-blue);
+  box-shadow: 0 18px 48px rgba(21,101,192,0.18);
+}
+
+.btn-primary:focus,
+.btn-primary:focus-visible{
+  outline: 3px solid rgba(30,136,229,0.18);
+  outline-offset: 3px;
+}
+
+/* Header / Nav tweaks */
+.site-header {
+  background: var(--white);
+  color: var(--text-dark);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 0 rgba(16,24,40,0.04);
+}
+
+/* .header-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  padding: 0.5rem 0.25rem;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: var(--brand-blue);
+} */
 
 
 /* Right side image */
